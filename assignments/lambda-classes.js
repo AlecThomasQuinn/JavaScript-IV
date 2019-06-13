@@ -7,10 +7,10 @@
 // speak()
 
 class Person{
-    constructor(propsPerson){
-        this.name = propsPerson.name
-        this.age = propsPerson.age
-        this.location = propsPerson.location
+    constructor(props){
+        this.name = props.name
+        this.age = props.age
+        this.location = props.location
     }
 
     speak(){
@@ -24,11 +24,11 @@ class Person{
 // grade(student, subject)
 
 class Instructor extends Person{
-    constructor(propsInstructor){
-        super(propsPerson)
-        this.specialty = propsInstructor.specialty
-        this.favLanguage = propsInstructor.favLanguage
-        this.catchPhrase = propsInstructor.catchPhrase
+    constructor(props){
+        super(props)
+        this.specialty = props.specialty
+        this.favLanguage = props.favLanguage
+        this.catchPhrase = props.catchPhrase
     }
 
     demo(subject){
@@ -43,15 +43,15 @@ class Instructor extends Person{
 // Student
 // previousBackground, className, favSubjects
 // listsSubjects()
-// PRAssignment()
-// sprintChallenge()
+// PRAssignment(subject)
+// sprintChallenge(subject)
 
 class Student extends Person{
-    constructor(propsPerson){
-        super(propsStudent)
-        this.previousBackground = propsStudent.previousBackground
-        this.className = propsStudent.className
-        this.favSubjects = propsStudent.favSubjects
+    constructor(props){
+        super(props)
+        this.previousBackground = props.previousBackground
+        this.className = props.className
+        this.favSubjects = props.favSubjects
     }
 
     //listsSubjects(){}
@@ -68,14 +68,14 @@ class Student extends Person{
 
 // Project Manager
 // gradClassName, favInstructor
-// standUp()
-// debugsCode()
+// standUp(channel)
+// debugsCode(student, subject)
 
 class PM extends Instructor{
-    constructor(propsPM){
-        super(propsInstructor)
-        this.gradClassName = propsPM.gradClassName
-        this.favInstructor = propsPM.favInstructor
+    constructor(props){
+        super(props)
+        this.gradClassName = props.gradClassName
+        this.favInstructor = props.favInstructor
     }
 
     standUp(channel){
@@ -94,7 +94,7 @@ const LanDevy = new Instructor({
     age: '43',
     location: 'Cenver, Dolorado',
 
-    specialty: 'React BOIII',
+    specialty: 'React Boiii',
     favLanguage: 'JAYESS',
     catchPhrase: 'Dogs are superior to cats in every way'
 })
@@ -122,3 +122,30 @@ const Anna = new PM({
     favInstructor: 'Lan Devy'
 })
 
+// Instructor tests
+// demo(subject)
+// grade(student, subject)
+
+console.log(LanDevy.name)
+console.log(LanDevy.specialty)
+console.log(LanDevy.demo('Classes in JavaScript'))
+console.log(LanDevy.grade(ATQ, 'ALL OF IT'))
+
+// Student tests
+// listsSubjects() <-- still broke
+// PRAssignment(subject)
+// sprintChallenge(subject)
+
+console.log(ATQ.name)
+console.log(ATQ.location)
+console.log(ATQ.PRAssignments('JavaScript IV'))
+console.log(ATQ.sprintChallenge('JavaScript IV'))
+
+// Project Manager tests
+// standUp(channel)
+// debugsCode(student, subject)
+
+console.log(Anna.name)
+console.log(Anna.specialty)
+console.log(Anna.standUp("Web21_Anna"))
+console.log(Anna.debugsCode(ATQ, "NO SUBJECT because Alec's code is perfect code with no absolutely no flaws"))
