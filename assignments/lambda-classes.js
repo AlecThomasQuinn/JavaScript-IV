@@ -87,3 +87,38 @@ class PM extends Instructor{
     }
 }
 
+//Actual Objects created with classes
+
+const LanDevy = new Instructor({
+    name: 'Lan Devy',
+    age: '43',
+    location: 'Cenver, Dolorado',
+
+    specialty: 'React BOIII',
+    favLanguage: 'JAYESS',
+    catchPhrase: 'Dogs are superior to cats in every way'
+})
+
+const ATQ = new Student({
+    name: 'The one and only Alec Thomas Quinn',
+    age: '42',
+    location: 'Boston, Lexus',
+
+    previousBackground: 'artistic genius turned office drone, labourer, wage slave, artistic genius',
+    className: 'Web 12',
+    favSubjects: ['UI', 'UX', 'v a p o u r w a v e', 'dead genres', 'Web Apps']
+})
+
+const Anna = new PM({
+    name: 'Anna Townsend',
+    age: 'it is impolite to ask',
+    location: 'Im not googling that thats weird',
+
+    specialty: 'closing zoom sessions too early',
+    favLanguage: 'Front-end stuff',
+    catchPhrase: 'Bee Ayy In Ayy In Ayy Ess',
+
+    gradClassName: 'Web 20',
+    favInstructor: 'Lan Devy'
+})
+
